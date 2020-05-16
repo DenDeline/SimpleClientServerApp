@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-
-function DisplayUsers(){
+export default () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [users, setUsers] = useState([]);
@@ -37,5 +36,3 @@ function DisplayUsers(){
         )
     }
 }
-
-export default DisplayUsers;
