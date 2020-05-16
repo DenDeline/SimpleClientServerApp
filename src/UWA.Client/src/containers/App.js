@@ -1,17 +1,8 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import DisplayInfo from './DisplayInfo';
+import DisplayUsers from './DisplayInfo';
 
 const App = () => (
-    // <BrowserRouter basename="/home/">
-    // <>
-    //     <Switch>
-    //         <Route exact path="/" component={DisplayInfo}/>
-    //         <Route exact path="/:activeUser" component={DisplayInfo}/>
-    //     </Switch>
-    // </>
-    // </BrowserRouter>
-    <DisplayInfo/>
+    <DisplayUsers/>
 )
 
 export default App;
