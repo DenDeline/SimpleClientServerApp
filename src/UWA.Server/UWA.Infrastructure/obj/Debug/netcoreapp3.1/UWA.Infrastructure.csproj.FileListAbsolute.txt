@@ -1,0 +1,15 @@
+F:\UserWebApp\src\UWA.Server\UWA.Infrastructure\bin\Debug\netcoreapp3.1\UWA.Infrastructure.deps.json
+F:\UserWebApp\src\UWA.Server\UWA.Infrastructure\bin\Debug\netcoreapp3.1\UWA.Infrastructure.dll
+F:\UserWebApp\src\UWA.Server\UWA.Infrastructure\obj\Debug\netcoreapp3.1\UWA.Infrastructure.csprojAssemblyReference.cache
+F:\UserWebApp\src\UWA.Server\UWA.Infrastructure\obj\Debug\netcoreapp3.1\UWA.Infrastructure.AssemblyInfoInputs.cache
+F:\UserWebApp\src\UWA.Server\UWA.Infrastructure\obj\Debug\netcoreapp3.1\UWA.Infrastructure.AssemblyInfo.cs
+F:\UserWebApp\src\UWA.Server\UWA.Infrastructure\obj\Debug\netcoreapp3.1\UWA.Infrastructure.csproj.CoreCompileInputs.cache
+F:\UserWebApp\src\UWA.Server\UWA.Infrastructure\bin\Debug\netcoreapp3.1\UWA.Infrastructure.pdb
+F:\UserWebApp\src\UWA.Server\UWA.Infrastructure\obj\Debug\netcoreapp3.1\UWA.Infrastructure.dll
+F:\UserWebApp\src\UWA.Server\UWA.Infrastructure\obj\Debug\netcoreapp3.1\UWA.Infrastructure.pdb
+F:\UserWebApp\src\UWA.Server\UWA.UserApi\bin\Debug\netcoreapp3.1\UWA.Infrastructure.deps.json
+F:\UserWebApp\src\UWA.Server\UWA.UserApi\bin\Debug\netcoreapp3.1\UWA.Infrastructure.dll
+F:\UserWebApp\src\UWA.Server\UWA.UserApi\bin\Debug\netcoreapp3.1\UWA.Infrastructure.pdb
+F:\UserWebApp\src\UWA.Server\UWA.UserApi\bin\Debug\netcoreapp3.1\UWA.Infrastructure.runtimeconfig.json
+F:\UserWebApp\src\UWA.Server\UWA.UserApi\bin\Debug\netcoreapp3.1\UWA.Infrastructure.runtimeconfig.dev.json
+F:\UserWebApp\src\UWA.Server\UWA.Infrastructure\obj\Debug\netcoreapp3.1\UWA.Infrastructure.genruntimeconfig.cache
