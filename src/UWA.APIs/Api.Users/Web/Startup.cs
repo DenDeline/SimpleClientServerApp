@@ -9,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 using UWA.Infrastructure;
 using UWA.Infrastructure.Data;
 
-namespace UWA.UserApi
+namespace Web
 {
     public class Startup
     {

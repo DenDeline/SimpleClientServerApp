@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Cors;
@@ -10,7 +7,7 @@ using UWA.Infrastructure.Data;
 using UWA.Infrastructure.DTOs.UserDtos;
 using UWA.Infrastructure.Models;
 
-namespace UWA.UserApi.Controllers
+namespace Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
