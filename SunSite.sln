@@ -1,17 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS.Application", "src\SS.Application\SS.Application.csproj", "{DA12C125-4133-4BEC-86D4-B66C355A5AEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Application", "src\SS.Application\SS.Application.csproj", "{DA12C125-4133-4BEC-86D4-B66C355A5AEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS.DAL.SqlServer", "src\SS.DAL.SqlServer\SS.DAL.SqlServer.csproj", "{1449C90A-0617-4BD0-9AE0-7627C87A1BC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.DAL.SqlServer", "src\SS.DAL.SqlServer\SS.DAL.SqlServer.csproj", "{1449C90A-0617-4BD0-9AE0-7627C87A1BC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS.Domain", "src\SS.Domain\SS.Domain.csproj", "{D9C509F7-9D77-464F-8021-F7E43CDCF6B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Domain", "src\SS.Domain\SS.Domain.csproj", "{D9C509F7-9D77-464F-8021-F7E43CDCF6B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS.Infrastructure", "src\SS.Infrastructure\SS.Infrastructure.csproj", "{602E39B8-34DC-4B5E-8349-8F75B69D2F77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Infrastructure", "src\SS.Infrastructure\SS.Infrastructure.csproj", "{602E39B8-34DC-4B5E-8349-8F75B69D2F77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS.WebAPI", "src\SS.WebAPI\SS.WebAPI.csproj", "{3EFB6F83-8B4C-4919-BB10-A7DF81DB29E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.WebAPI", "src\SS.WebAPI\SS.WebAPI.csproj", "{3EFB6F83-8B4C-4919-BB10-A7DF81DB29E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{347236CE-0133-48DA-B9E6-DBD2BDD4B180}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{FB7ED7E5-CB01-4AB9-A256-3AC0F524D565}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E6A69033-D7D0-4562-B726-FB97504702E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentations", "Presentations", "{074B8F41-191B-4964-800A-0B4F81F6A46A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnds", "BackEnds", "{49619E70-EE01-4DC7-BFAF-0EF3E85B610E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DA12C125-4133-4BEC-86D4-B66C355A5AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -86,5 +93,19 @@ Global
 		{3EFB6F83-8B4C-4919-BB10-A7DF81DB29E1}.Release|x64.Build.0 = Release|Any CPU
 		{3EFB6F83-8B4C-4919-BB10-A7DF81DB29E1}.Release|x86.ActiveCfg = Release|Any CPU
 		{3EFB6F83-8B4C-4919-BB10-A7DF81DB29E1}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA12C125-4133-4BEC-86D4-B66C355A5AEE} = {FB7ED7E5-CB01-4AB9-A256-3AC0F524D565}
+		{1449C90A-0617-4BD0-9AE0-7627C87A1BC4} = {E6A69033-D7D0-4562-B726-FB97504702E7}
+		{D9C509F7-9D77-464F-8021-F7E43CDCF6B6} = {FB7ED7E5-CB01-4AB9-A256-3AC0F524D565}
+		{602E39B8-34DC-4B5E-8349-8F75B69D2F77} = {E6A69033-D7D0-4562-B726-FB97504702E7}
+		{3EFB6F83-8B4C-4919-BB10-A7DF81DB29E1} = {49619E70-EE01-4DC7-BFAF-0EF3E85B610E}
+		{49619E70-EE01-4DC7-BFAF-0EF3E85B610E} = {074B8F41-191B-4964-800A-0B4F81F6A46A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C322ADF8-6BE6-4F0B-8418-7561FF825FA8}
 	EndGlobalSection
 EndGlobal
