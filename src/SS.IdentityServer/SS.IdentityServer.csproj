@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -6,6 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="IdentityServer4" Version="4.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SS.Application\SS.Application.csproj" />
+    <ProjectReference Include="..\SS.DAL.SqlServer\SS.DAL.SqlServer.csproj" />
+    <ProjectReference Include="..\SS.Infrastructure\SS.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
