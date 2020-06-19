@@ -12,13 +12,30 @@ namespace SS.IdentityServer
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
+        public IWebHostEnvironment Environment { get; }
+
+        public Startup(IWebHostEnvironment environment)
         {
+            Environment = environment;
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            var identityServerBuilder = services.AddIdentityServer();
+            if (Environment.IsDevelopment())
+            {
+                identityServerBuilder
+                    .AddInMemoryClients(Config.Clients)
+                    .AddInMemoryApiResources(Config.ApiResources)
+                    .AddInMemoryApiScopes(Config.ApiScopes)
+                    .AddInMemoryIdentityResources(Config.IdentityResources);
+
+                identityServerBuilder.AddDeveloperSigningCredential();
+            }
+
+            services.AddControllersWithViews();
+        }
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -27,13 +44,12 @@ namespace SS.IdentityServer
             }
 
             app.UseRouting();
+            app.UseIdentityServer();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
