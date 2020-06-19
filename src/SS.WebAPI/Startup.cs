@@ -1,3 +1,4 @@
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,10 +23,16 @@ namespace SS.WebAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services
-                .AddApplication()
+            services.AddApplication()
                 .AddPersistence(Configuration)
                 .AddInfrastructure();
+
+            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(options =>
+                {
+                    options.Authority = "https://localhost:44367/";
+                    options.ApiName = "accounts";
+                });
 
             services.AddCors(options =>
             {
@@ -50,8 +57,8 @@ namespace SS.WebAPI
             }
 
             app.UseRouting();
-
             app.UseCors(MyAllowSpecificOrigins);
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
