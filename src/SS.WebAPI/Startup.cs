@@ -1,16 +1,13 @@
-using System;
-using Application;
-using AutoMapper;
-using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Persistence;
+using SS.Application;
+using SS.Infrastructure;
+using SS.Persistence;
 
-namespace Web
+namespace SS.Web
 {
     public class Startup
     {

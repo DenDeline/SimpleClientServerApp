@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
-using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
+using SS.Domain.Entities;
 
-namespace Application.Common.Interfaces
+namespace SS.Application.Common.Interfaces
 {
     public interface IUwaDbContext
     {

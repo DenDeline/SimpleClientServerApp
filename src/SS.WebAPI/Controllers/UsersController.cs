@@ -1,13 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Application.Users.Models;
-using AutoMapper;
-using Domain.Entities;
-using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using SS.Application.Users.Models;
+using SS.Infrastructure.Repositories;
 
-namespace Web.Controllers
+namespace SS.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Common.Interfaces;
-using Application.Common.Mappings;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using SS.Application.Common.Interfaces;
+using SS.Application.Common.Mappings;
 
-namespace Application.Common.Repository
+namespace SS.Application.Common.Repository
 {
     public class BaseRepository<TEntity>: IRepository<TEntity>
         where TEntity : class

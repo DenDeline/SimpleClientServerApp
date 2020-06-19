@@ -4,9 +4,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Common.Mappings;
+using SS.Application.Common.Mappings;
 
-namespace Application.Common.Repository
+namespace SS.Application.Common.Repository
 {
     public interface IRepository<TEntity> 
         where TEntity : class

@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using Application.Common.Interfaces;
-using Application.Common.Repository;
-using Application.Users.Models;
 using AutoMapper;
-using Domain.Entities;
+using SS.Application.Common.Interfaces;
+using SS.Application.Common.Repository;
+using SS.Application.Users.Models;
+using SS.Domain.Entities;
 
-namespace Infrastructure.Repositories
+namespace SS.Infrastructure.Repositories
 {
     public class UserRepository: BaseRepository<User>
     {

@@ -1,9 +1,9 @@
-﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using SS.Domain.Entities;
 
-namespace Persistence.Configurations
+namespace SS.Persistence.Configurations
 {
     public class UsersConfiguration: IEntityTypeConfiguration<User>
     {

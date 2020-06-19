@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Application.Common.Interfaces;
-using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using SS.Application.Common.Interfaces;
+using SS.Domain.Entities;
 
-namespace Persistence
+namespace SS.Persistence
 {
     public class UwaDbContext: DbContext, IUwaDbContext
     {

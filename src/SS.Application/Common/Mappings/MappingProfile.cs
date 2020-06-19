@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using AutoMapper;
 
-namespace Application.Common.Mappings
+namespace SS.Application.Common.Mappings
 {
     public class MappingProfile : Profile
     {
