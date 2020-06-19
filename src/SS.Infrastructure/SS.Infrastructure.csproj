@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <OutputPath>..\Web\bin\$(Configuration)\</OutputPath>
+    <OutputPath>..\SS.WebAPI\bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\SS.Application\SS.Application.csproj" />
   </ItemGroup>
 
 
