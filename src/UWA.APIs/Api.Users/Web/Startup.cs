@@ -1,13 +1,14 @@
 using System;
+using Application;
 using AutoMapper;
+using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using UWA.Infrastructure;
-using UWA.Infrastructure.Data;
+using Persistence;
 
 namespace Web
 {
@@ -24,12 +25,10 @@ namespace Web
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<UserContext>(opt =>
-            {
-                opt.UseSqlServer(
-                    Configuration.GetConnectionString("UserDb"), 
-                    options => options.MigrationsAssembly("UWA.Infrastructure"));
-            });
+            services
+                .AddApplication()
+                .AddPersistence(Configuration)
+                .AddInfrastructure();
 
             services.AddCors(options =>
             {
@@ -42,9 +41,6 @@ namespace Web
                 });
             });
 
-            services.AddScoped<IUserRepo, UserRepo>();
-
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddControllers();
         }

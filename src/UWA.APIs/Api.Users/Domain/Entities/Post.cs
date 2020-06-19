@@ -8,8 +8,8 @@ namespace Domain.Entities
 {
     public class Post
     {
-        public int Id { get; set; }
-        public int CreatorId { get; set; }
+        public string Id { get; set; }
+        public string CreatorId { get; set; }
 
         public DateTime Created { get; set; }
         public DateTime LastModified  { get; set; }

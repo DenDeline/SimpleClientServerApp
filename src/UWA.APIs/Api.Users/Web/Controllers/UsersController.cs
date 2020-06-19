@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Application.Users.Models;
 using AutoMapper;
+using Domain.Entities;
+using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using UWA.Infrastructure.Data;
-using UWA.Infrastructure.DTOs.UserDtos;
-using UWA.Infrastructure.Models;
 
 namespace Web.Controllers
 {
@@ -14,35 +14,33 @@ namespace Web.Controllers
     [EnableCors("_myAllowSpecificOrigins")]
     public class UsersController: Controller
     {
-        private readonly IUserRepo _userRepos;
-        private readonly IMapper _mapper;
+        private readonly UserRepository _userRepos;
 
-        public UsersController(IUserRepo userRepos, IMapper mapper)
+        public UsersController(UserRepository userRepos)
         {
             _userRepos = userRepos;
-            _mapper = mapper;
         }
 
         [HttpGet] 
-        public async Task<ActionResult<IEnumerable<UserReadDto>>> GetAllUsers()
+        public ActionResult<IEnumerable<UserReadDto>> GetAllUsers()
         {
-            var users = await _userRepos.GetAllUsersAsync();
+            var users = _userRepos.Get();
             if (users == null)
             {
                 return NotFound();
             }
-            return Ok(_mapper.Map<IEnumerable<UserReadDto>>(users));
+            return Ok(users);
         }
 
         [HttpGet("{id}",Name = "GetUserById")]
-        public async Task<ActionResult<UserReadDto>> GetUserById(int id)
+        public ActionResult<UserReadDto> GetUserById(object id)
         {
-            var user = await _userRepos.GetUserAsync(id);
+            var user = _userRepos.GetById(id);
             if (user == null)
             {
                 return NotFound();
             }
-            return Ok(_mapper.Map<UserReadDto>(user));
+            return Ok(user);
         }
 
         [HttpPost]
@@ -52,14 +50,9 @@ namespace Web.Controllers
             {
                 return BadRequest();
             }
-
-            var userModel = _mapper.Map<User>(userCreateDto);
-            await _userRepos.CreateUserAsync(userModel);
+            var user = _userRepos.Insert(userCreateDto);
             await _userRepos.SaveChangesAsync();
-
-            var userReadDto = _mapper.Map<UserReadDto>(userModel);
-
-            return CreatedAtRoute(nameof(GetUserById), new {Id = userModel.Id}, userReadDto);
+            return CreatedAtRoute(nameof(GetUserById), new {Id = user}, user);
         }
     }
 }

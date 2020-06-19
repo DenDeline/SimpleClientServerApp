@@ -10,6 +10,7 @@ namespace Domain.Entities
 {
     public class User: IdentityUser
     {
+
         public string Name { get; set; }
         public string Surname { get; set; }
 
@@ -17,5 +18,7 @@ namespace Domain.Entities
 
         public DateTime Created { get; set; }
         public DateTime LastModified  { get; set; }
+
+
     }
 }

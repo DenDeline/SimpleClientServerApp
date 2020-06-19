@@ -12,10 +12,10 @@ namespace Persistence.Configurations
             builder.HasKey(e => e.Id);
 
             builder.Property(e => e.Created)
-                .HasConversion<DateTimeToStringConverter>();
+                .HasConversion(new DateTimeToStringConverter());
 
             builder.Property(e => e.LastModified)
-                .HasConversion<DateTimeToStringConverter>();
+                .HasConversion(new DateTimeToStringConverter());
 
             builder.HasOne<User>()
                 .WithMany()

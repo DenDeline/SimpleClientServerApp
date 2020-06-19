@@ -24,7 +24,7 @@ namespace Persistence.Configurations
                 .IsRequired();
 
             builder.Property(e => e.Birthday)
-                .HasConversion<DateTimeToStringConverter>();
+                .HasConversion(new DateTimeToStringConverter());
         }
     }   
 }

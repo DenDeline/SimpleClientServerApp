@@ -12,10 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <Folder Include="Posts\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Posts\" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 </Project>
