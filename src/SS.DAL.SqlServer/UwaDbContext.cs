@@ -2,7 +2,7 @@
 using SS.Application.Common.Interfaces;
 using SS.Domain.Entities;
 
-namespace SS.Persistence
+namespace SS.DAL.SqlServer
 {
     public class UwaDbContext: DbContext, IUwaDbContext
     {

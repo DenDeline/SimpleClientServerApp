@@ -4,15 +4,13 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SS.Persistence.Migrations
+namespace SS.DAL.SqlServer.Migrations
 {
     [DbContext(typeof(UwaDbContext))]
-    [Migration("20200519081632_InitMigration")]
-    partial class InitMigration
+    partial class UwaDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

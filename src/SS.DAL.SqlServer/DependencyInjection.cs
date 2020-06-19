@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SS.Application.Common.Interfaces;
 
-namespace SS.Persistence
+namespace SS.DAL.SqlServer
 {
     public static class DependencyInjection
     {

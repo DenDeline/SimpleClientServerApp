@@ -18,7 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SS.Application\SS.Application.csproj" />
     <ProjectReference Include="..\SS.Infrastructure\SS.Infrastructure.csproj" />
-    <ProjectReference Include="..\SS.Persistence\SS.Persistence.csproj" />
+    <ProjectReference Include="..\SS.DAL.SQLServer\SS.DAL.SqlServer.csproj" />
   </ItemGroup>
 
 </Project>

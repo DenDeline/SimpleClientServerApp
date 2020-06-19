@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SS.Persistence.Migrations
+namespace SS.DAL.SqlServer.Migrations
 {
     public partial class InitMigration : Migration
     {

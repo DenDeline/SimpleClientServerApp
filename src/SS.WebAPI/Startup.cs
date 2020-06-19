@@ -4,10 +4,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SS.Application;
+using SS.DAL.SqlServer;
 using SS.Infrastructure;
-using SS.Persistence;
 
-namespace SS.Web
+namespace SS.WebAPI
 {
     public class Startup
     {

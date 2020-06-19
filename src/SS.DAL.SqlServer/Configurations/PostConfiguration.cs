@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SS.Domain.Entities;
 
-namespace SS.Persistence.Configurations
+namespace SS.DAL.SqlServer.Configurations
 {
     public class PostConfiguration: IEntityTypeConfiguration<Post>
     {

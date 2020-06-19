@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using SS.Application.Users.Models;
 using SS.Infrastructure.Repositories;
 
-namespace SS.Web.Controllers
+namespace SS.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

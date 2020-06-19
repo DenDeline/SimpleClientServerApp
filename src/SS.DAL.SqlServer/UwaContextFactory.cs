@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace SS.Persistence
+namespace SS.DAL.SqlServer
 {
     public class UwaContextFactory: IDesignTimeDbContextFactory<UwaDbContext>
     {
