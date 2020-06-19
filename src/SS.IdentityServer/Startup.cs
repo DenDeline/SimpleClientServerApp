@@ -25,10 +25,10 @@ namespace SS.IdentityServer
             if (Environment.IsDevelopment())
             {
                 identityServerBuilder
-                    .AddInMemoryClients(Config.Clients)
-                    .AddInMemoryApiResources(Config.ApiResources)
-                    .AddInMemoryApiScopes(Config.ApiScopes)
-                    .AddInMemoryIdentityResources(Config.IdentityResources);
+                    .AddInMemoryClients(Config.Clients())
+                    .AddInMemoryApiScopes(Config.ApiScopes())
+                    .AddInMemoryApiResources(Config.ApiResources())
+                    .AddInMemoryIdentityResources(Config.IdentityResources());
 
                 identityServerBuilder.AddDeveloperSigningCredential();
             }
