@@ -1,20 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using SS.Application.Users.Models;
 using SS.Infrastructure.Repositories;
 
-namespace SS.WebAPI.Controllers
+namespace SS.IdentityServer.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("_myAllowSpecificOrigins")]
-    public class UsersController: Controller
+    [Route("api/[controller]")]
+    public class AccountsController: Controller
     {
         private readonly UserRepository _userRepos;
 
-        public UsersController(UserRepository userRepos)
+        public AccountsController(UserRepository userRepos)
         {
             _userRepos = userRepos;
         }

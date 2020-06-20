@@ -5,22 +5,34 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SS.Application;
+using SS.DAL.SqlServer;
+using SS.Infrastructure;
 
 namespace SS.IdentityServer
 {
     public class Startup
     {
-        public IWebHostEnvironment Environment { get; }
+        private IConfiguration Configuration { get; }
+        private IWebHostEnvironment Environment { get; }
 
-        public Startup(IWebHostEnvironment environment)
+        public Startup(
+            IConfiguration configuration,
+            IWebHostEnvironment environment)
         {
+            Configuration = configuration;
             Environment = environment;
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddApplication()
+                .AddPersistence(Configuration)
+                .AddInfrastructure();
+
             var identityServerBuilder = services.AddIdentityServer();
             if (Environment.IsDevelopment())
             {
@@ -33,6 +45,7 @@ namespace SS.IdentityServer
                 identityServerBuilder.AddDeveloperSigningCredential();
             }
 
+            services.AddLocalApiAuthentication();
             services.AddControllersWithViews();
         }
 
